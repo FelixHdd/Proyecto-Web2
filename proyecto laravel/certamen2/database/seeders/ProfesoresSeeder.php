@@ -12,6 +12,8 @@ class ProfesoresSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        // DB::table('profesores')->insert([
+        //     ['rut'=> '********-*','nombre'=>'******','apellido'=>'*****'],
+        // ]);
     }
 }

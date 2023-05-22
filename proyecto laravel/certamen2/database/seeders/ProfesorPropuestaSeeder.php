@@ -12,6 +12,6 @@ class ProfesorPropuestaSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
     }
 }

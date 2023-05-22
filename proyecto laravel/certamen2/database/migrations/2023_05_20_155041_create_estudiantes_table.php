@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('estudiantes', function (Blueprint $table) {
             //campos
-            $table->string('rut',10);
+            $table->string('rut',10)->primary();
             $table->string('nombre',20);
             $table->string('apellido',20);
             $table->string('email',50);
-            //faltan las relaciones de PK Y FK correspondientes.
+            
         });
     }
 
