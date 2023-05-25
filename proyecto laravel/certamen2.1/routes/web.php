@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EstudiantesController;
+use App\Http\Controllers\AdministradoresController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,6 @@ use App\Http\Controllers\EstudiantesController;
 Route::get('/',[HomeController::class,'index'])->name('home.index');
 
 Route::resource('/estudiantes',EstudiantesController::class)->parameter('estudiantes','estudiante');
+
+Route::resource('/administradores',EstudiantesController::class)->parameter('administradores','administrador');
+
