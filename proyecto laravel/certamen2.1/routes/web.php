@@ -25,5 +25,5 @@ Route::get('/',[HomeController::class,'index'])->name('home.index');
 
 Route::resource('/estudiantes',EstudiantesController::class)->parameter('estudiantes','estudiante');
 
-Route::resource('/administradores',EstudiantesController::class)->parameter('administradores','administrador');
+Route::resource('/administradores',AdministradoresController::class)->parameter('administradores','administrador');
 
