@@ -13,6 +13,7 @@ class Estudiante extends Model
     protected $table = 'estudiantes';
     protected $primarykey = 'rut';
     protected $keyType = "string";
+    public $timestamps = false;
     
 
     public function propuesta():BelongTo{

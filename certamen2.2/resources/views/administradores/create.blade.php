@@ -74,7 +74,7 @@
           </div>
         </div>
       </div>
-       <div class="row pt-4">
+      <div class="row pt-4">
         <div class="col-7">
           <div class="card">
             <div class="card-header bg-primary text-white">

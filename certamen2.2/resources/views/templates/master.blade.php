@@ -46,8 +46,8 @@
                       Administrador
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Profesores</a></li>
-                      <li><a class="dropdown-item" href="#">Alumnos</a></li>
+                      <li><a class="dropdown-item" href="{{route('administradores.profesores')}}">Profesores</a></li>
+                      <li><a class="dropdown-item" href="{{route('administradores.estudiantes')}}">Estudiantes</a></li>
                       <li><a class="dropdown-item" href="#">Estado Propuesta</a></li>
                     </ul>
                   </li>

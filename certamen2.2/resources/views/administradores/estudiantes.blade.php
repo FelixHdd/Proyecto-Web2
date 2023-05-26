@@ -1,39 +1,84 @@
 @extends('templates.master')
 @section('contenidoPrincipal')
-<div class="container-flex p-5">
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                <h2 class="text">Listado e Ingreso de Estudiantes</h2>
-            </div>
-            <div class="card-body">
-                <form action="">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value="">
-                            @foreach()
-                                <option value=""></option>
-                            @endforeach
-                        </option>
-                    </select>
-                    <div class="row  mt-3">
-                        <div class="col">
-                            <input class="form-control" type="text" value="Nombre" aria-label="Ejemplo de input de solo lectura" readonly>
-                        </div>
-                        <div class="col">
-                            <input class="form-control" type="text" value="Apellido" aria-label="Ejemplo de input de solo lectura" readonly>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label"></label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                    <div>
-                        <button class="btn btn-primary" type="submit">
-                            Subir Propuesta
-                        </button>
-                        <button class="btn btn-secondary" type="reset">Cancelar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+
+
+<div class="row pt-4">
+  <div class="col-7">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h2>Listado de Estudiantes</h2>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Rut</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($estudiantes as $index => $estudiante)
+              <tr>
+                <td class="align-middle">{{$index+1}}</td>
+                <td class="align-middle">{{$estudiante->rut}}</td>
+                <td class="align-middle">{{$estudiante->nombre}}</td>
+                <td class="align-middle">{{$estudiante->apellido}}</td>
+                <td class="align-middle">{{$estudiante->email}}</td>
+              </tr>
+            @endforeach
+          </tbody>
+        </table>
+      </div>
     </div>
-@endSection
+  </div>
+  <div class="col-5">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h2>Agregar Estudiante</h2>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <div class="row">
+            <div class="col-4">
+              <div class="mb-3">
+                <label for="rut" class="form-label">Rut</label>
+                <input type="text" class="form-control" id="rut" placeholder="xxxxxxxx-x">
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com">
+              </div>
+            </div>
+          </div>
+                
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="">
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="">
+              </div>
+            </div>
+                 
+            <button class="btn btn-primary">
+              Agregar Profesor
+            </button>
+          </div>
+               
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+@endsection

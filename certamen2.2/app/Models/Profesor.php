@@ -12,6 +12,7 @@ class Profesor extends Model
 {
     use HasFactory;
     protected $table = 'profesores';
+    public $timestamps = false;
     
     public function profesor_propuesta():BelongsTo{
         return $this->belongsTo(ProfesorPropuesta::class);
