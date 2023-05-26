@@ -3,16 +3,16 @@
 <div class="container-flex p-5">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                <h2>Subir Propuesta</h2>
+                <h2 class="text">Listado e Ingreso de Estudiantes</h2>
             </div>
             <div class="card-body">
                 <form action="">
                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione su Rut</option>
-                        <option value="1">Jose Alberto De Las Mercedes</option>
-                        <option value="2">Ruben Doblas</option>
-                        <option value="3">Elba Zurita</option>
-                       <!-- Seleccionar nombre de alumno -->
+                        <option value="">
+                            @foreach()
+                                <option value=""></option>
+                            @endforeach
+                        </option>
                     </select>
                     <div class="row  mt-3">
                         <div class="col">
@@ -35,5 +35,5 @@
                 </form>
             </div>
         </div>
-     </div>
+    </div>
 @endSection

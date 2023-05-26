@@ -14,17 +14,17 @@
     <div class="container-flex">
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid" >
-              <a class="navbar-brand text-white" href="#" >Taller Sistemas de Informacion</a>
+              <a class="navbar-brand text-white" href="{{ route('home.index') }}" >Taller Sistemas de Informacion</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item " >
-                    <a class="nav-link active text-white" aria-current="page" href="#" >Inicio</a>
+                    <a class="nav-link active text-white" aria-current="page" href="{{ route('home.index') }}" >Inicio</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link @if(Route::current()->getName()=='estudiante.index') active @endif dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Estudiante
                     </a>
                     <ul class="dropdown-menu">
@@ -34,7 +34,7 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link @if(Route::current()->getName()=='profesor.index') active @endif dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Profesor
                     </a>
                     <ul class="dropdown-menu">
@@ -42,7 +42,7 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link @if(Route::current()->getName()=='administrador.index') active @endif dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Administrador
                     </a>
                     <ul class="dropdown-menu">

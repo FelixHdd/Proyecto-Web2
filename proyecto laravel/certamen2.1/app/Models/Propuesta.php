@@ -14,7 +14,5 @@ class Propuesta extends Model
     public function estudiantes():HasMany{
         return $this->hasMany(Estudiante::class);
     }
-
-    // falta la relacion de la tabla propuestas con la profesorpropuestas.
-
+    
 }
