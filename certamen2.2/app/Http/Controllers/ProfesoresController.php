@@ -11,4 +11,10 @@ class ProfesoresController extends Controller
         $profesores = Profesor::orderBy('rut')->orderBy('nombre')->get();
         return view('profesores.index',compact('profesores'));
     }
+    public function delete(){
+        return view('profesores.EliminarC');
+    }
+    public function add(){
+        return view('profesores.IngresoC');
+    }
 }

@@ -18,6 +18,15 @@ class AdministradoresController extends Controller
         $estudiantes = Estudiante::all();
         return view('administradores.estudiantes',compact('estudiantes'));
     }
+    public function estudiantesstore(Request $request){
+        $estudiante = new Estudiante;
+        $estudiante->rut = $request->rut;
+        $estudiante->nombre = $request->nombre;
+        $estudiante->apellido = $request->apellido;
+        $estudiante->email = $request->email;
+        $estudiante->save();
+        return redirect()->route('administradores.estudiantes');
+    }
     public function profesoresadmin(){
         $profesores = Profesor::all();
         return view('administradores.profesores',compact('profesores'));
@@ -30,6 +39,7 @@ class AdministradoresController extends Controller
         $profesor->save();
         return redirect()->route('administradores.profesores');
     }
+    
     public function propuestasadmin(){
         return view('administradores.propuestas');
     }

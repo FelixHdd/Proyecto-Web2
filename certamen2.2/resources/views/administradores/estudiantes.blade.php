@@ -40,18 +40,19 @@
         <h2>Agregar Estudiante</h2>
       </div>
       <div class="card-body">
-        <form action="">
+        <form method="POST" action="{{route('estudiantes.store')}}">
+          @csrf
           <div class="row">
             <div class="col-4">
               <div class="mb-3">
                 <label for="rut" class="form-label">Rut</label>
-                <input type="text" class="form-control" id="rut" placeholder="xxxxxxxx-x">
+                  <input type="text" class="form-control" id="rut" name="rut" placeholder="xxxxxxxx-x">
               </div>
             </div>
             <div class="col-8">
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com">
+                <input type="text" class="form-control" id="email" name="email" placeholder="ejemplo@gmail.com">
               </div>
             </div>
           </div>
@@ -60,18 +61,20 @@
             <div class="col">
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="">
+                      <input type="text" class="form-control"  id="nombre" name="nombre" >
               </div>
             </div>
             <div class="col">
               <div class="mb-3">
                 <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido" placeholder="">
+                    <input type="text" class="form-control"  id="apellido" name="apellido" >
               </div>
             </div>
-                 
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" type="submit">
               Agregar Profesor
+            </button>
+            <button class="btn btn-primary" type="reset">
+              Cancelar
             </button>
           </div>
                

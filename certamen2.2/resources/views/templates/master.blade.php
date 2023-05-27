@@ -38,7 +38,9 @@
                       Profesor
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Propuestas</a></li>
+                      <li><a class="dropdown-item" href="#">Acceso Propuestas</a></li>
+                      <li><a class="dropdown-item" href="#">Ingresar Comentario</a></li>
+                      <li><a class="dropdown-item" href="#">Eliminar Comentario</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">

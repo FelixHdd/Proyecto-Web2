@@ -25,12 +25,22 @@ use App\Http\Controllers\ProfesoresController;
 //ruta de inicio
 Route::get('/',[HomeController::class,'index'])->name('home.index');
 
-//rutas de estudiantes(tiene las 3 opciones 'la vista index es la principal de la opcion estudiante)
-Route::resource('/estudiantes',EstudiantesController::class)->parameter('estudiantes','estudiante');
+//rutas estudiantes
+Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
+Route::get('/estudiantes/propuesta',[EstudiantesController::class,'create'])->name('estudiantes.create');
 
+
+
+//rutas administradores
 Route::get('/administradores',[AdministradoresController::class,'index'])->name('administradores.index');
 Route::get('/administradores/profesores',[AdministradoresController::class,'profesoresadmin'])->name('administradores.profesores');
 Route::get('/administradores/estudiantes',[AdministradoresController::class,'estudiantesadmin'])->name('administradores.estudiantes');
 Route::post('/administradores/profesores',[AdministradoresController::class,'profesoresstore'])->name('profesores.store');
+Route::post('/administradores/estudiantes',[AdministradoresController::class,'estudiantesstore'])->name('estudiantes.store');
 
+
+//rutas profesores
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
+Route::get('/profesores/borrar',[ProfesoresController::class,'delete'])->name('profesores.delete');
+Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('profesores.add');
+

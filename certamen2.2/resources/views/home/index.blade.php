@@ -28,7 +28,7 @@
                       </p>
                       <div class="row d-flex align-items-center text-center">
                           <div class="col" >
-                              <a href="" class=" btn btn-secondary">
+                              <a href="{{route('profesores.index')}}" class=" btn btn-secondary">
                                   Gestionar Propuestas
                               </a>
                           </div>
