@@ -16,8 +16,8 @@ class Estudiante extends Model
     public $timestamps = false;
     
 
-    public function propuesta():BelongTo{
-        return this->belongsTo(Propuesta::class);
+    public function propuesta():BelongsTo{
+        return This->belongsTo(Propuesta::class);
     }
 
 }

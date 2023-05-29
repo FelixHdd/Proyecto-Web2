@@ -41,7 +41,8 @@
       </div>
       <div class="card-body">
         <form method="POST" action="{{route('estudiantes.store')}}">
-          @csrf
+        @merhod('put')  
+        @csrf
           <div class="row">
             <div class="col-4">
               <div class="mb-3">

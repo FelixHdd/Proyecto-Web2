@@ -12,7 +12,7 @@
                       </p>
                       <div class="row d-flex align-items-center">
                           <div class="col text-start " >
-                              <a href="" class="btn btn-secondary">
+                              <a href="{{route('estudiantes.create')}}" class="btn btn-secondary">
                                   Subir Propuesta
                               </a>
                           </div>

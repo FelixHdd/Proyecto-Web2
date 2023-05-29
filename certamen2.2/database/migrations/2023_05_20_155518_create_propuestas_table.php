@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('fecha');
             $table->string('documento',100);
             $table->tinyInteger('estado');
-            $table->string('estudiante_rut',10);
+          //  $table->string('estudiante_rut',10);
             //faltan las relaciones de PK Y FK correspondientes.
             
         });

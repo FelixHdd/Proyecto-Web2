@@ -14,7 +14,7 @@ class EstudiantesController extends Controller
     }
     public function create(){
         $estudiantes = Estudiante::all();
-        return view('estudiantes.create',compact('propuestas'));
+        return view('estudiantes.create',compact('estudiantes'));
     }
     public function store(Request $request){
         $estudiante = new Estudiante();
@@ -23,7 +23,7 @@ class EstudiantesController extends Controller
         $estudiante->apellido = $request->apellido;
         $estudiante->email = $request->email;
         $estudiante->save();
-        return redirect()->route('jugadores.index');
+        return redirect()->route('estudiantes.index');
     }
     public function show(Estudiante $estudiantes){
         return view('estudiantes.show');

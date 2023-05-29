@@ -6,7 +6,8 @@
                 <h2>Subir Propuesta</h2>
             </div>
             <div class="card-body">
-                <form action="">
+                <form method="POST" action="{{route('propuestas.store')}}" >
+                    @csrf
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Seleccione su Rut</option>
                         <option value="1">Jose Alberto De Las Mercedes</option>
@@ -16,15 +17,15 @@
                     </select>
                     <div class="row  mt-3">
                         <div class="col">
-                            <input class="form-control" type="text" value="Nombre" aria-label="Ejemplo de input de solo lectura" readonly>
+                            <input class="form-control" type="text" value="Nombre" name = "nombre"aria-label="Ejemplo de input de solo lectura" >
                         </div>
                         <div class="col">
-                            <input class="form-control" type="text" value="Apellido" aria-label="Ejemplo de input de solo lectura" readonly>
+                            <input class="form-control" type="text" value="Apellido" name="apellido" aria-label="Ejemplo de input de solo lectura" >
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label"></label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" name="pdf" id="formFile" >
                     </div>
                     <div>
                         <button class="btn btn-primary" type="submit">
