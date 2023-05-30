@@ -6,7 +6,7 @@
                 <h2>Subir Propuesta</h2>
             </div>
             <div class="card-body">
-                <form method="POST" action="{{route('propuestas.store')}}" >
+                <form method="POST" action="{{route('propuestas.store')}}" enctype="multipart/form-data">
                     @csrf
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Seleccione su Rut</option>
