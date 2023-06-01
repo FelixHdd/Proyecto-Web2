@@ -19,31 +19,17 @@
                       </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>23456123-6</td>
-                        <td>Jose</td>
-                        <td>Alvarado</td>
-                        <td>Rechazado</td>
-                        <td><a href="" class="btn btn-primary ">Revisar Comentario</a></td>
+                      @foreach ($propuestas as $propuesta)
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>{{$propuesta->estudiante_rut}}</td>
+                          <td>{{$propuesta->estudiante_rut->nombre}}</td>
+                          <td>{{$propuesta->estudiante_rut->apellido}}</td>
+                          <td>{{$propuesta->estado}}</td>
+                          <td><a href="" class="btn btn-primary ">Revisar Comentario</a></td>
 
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>21763063-4</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>Aprobado</td>
-                        <td><a href="" class="btn btn-primary ">Revisar Comentario</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>21763063-4</td>
-                        <td>Josue</td>
-                        <td>Roberson</td>
-                        <td>Esperando Revision</td>
-                        <td>No hay comentario</td>
-                      </tr>
+                        </tr>
+                      @endforeach
                     </tbody>
                 </table>
             </div>

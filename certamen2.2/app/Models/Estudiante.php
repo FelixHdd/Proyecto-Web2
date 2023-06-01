@@ -17,7 +17,7 @@ class Estudiante extends Model
     
 
     public function propuesta():BelongsTo{
-        return This->belongsTo(Propuesta::class);
+        return $this->belongsTo(Propuesta::class);
     }
 
 }

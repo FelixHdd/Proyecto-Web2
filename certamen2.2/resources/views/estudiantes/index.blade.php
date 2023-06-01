@@ -29,7 +29,7 @@
                       </p>
                       <div class="row d-flex align-items-center">
                           <div class="col" >
-                              <a href="" class=" btn btn-secondary">
+                              <a href="{{route('estudiantes.show')}}" class=" btn btn-secondary">
                                   Estado Propuesta
                               </a>
                           </div>

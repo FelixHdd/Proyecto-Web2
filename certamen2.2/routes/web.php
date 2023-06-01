@@ -29,6 +29,7 @@ Route::get('/',[HomeController::class,'index'])->name('home.index');
 //rutas estudiantes
 Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
 Route::get('/estudiantes/propuesta',[EstudiantesController::class,'create'])->name('estudiantes.create');
+Route::get('/estudiantes/estado',[EstudiantesController::class,'show'])->name('estudiantes.show');
 
 
 
