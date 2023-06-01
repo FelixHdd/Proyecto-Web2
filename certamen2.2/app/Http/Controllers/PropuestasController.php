@@ -20,7 +20,7 @@ class PropuestasController extends Controller
         $name = $file->getClientOriginalName();
         $file->storeAs('',$name,'public');
         $propuesta->documento = $name;
-        $propuesta->estado = "1";
+        $propuesta->estado = "0";
         $propuesta->save();
        
         return redirect()->route('estudiantes.index');
