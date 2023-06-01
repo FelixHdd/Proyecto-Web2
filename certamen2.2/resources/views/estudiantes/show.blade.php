@@ -19,9 +19,9 @@
                       </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                      @foreach ($propuestas as $propuesta)
+                      @foreach ($propuestas as $index =>$propuesta)
                         <tr>
-                          <th scope="row">1</th>
+                          <th scope="row">{{$index + 1}}</th>
                           <td>{{$propuesta->estudiante_rut}}</td>
                           <td>{{$propuesta->estudiante_rut->nombre}}</td>
                           <td>{{$propuesta->estudiante_rut->apellido}}</td>
