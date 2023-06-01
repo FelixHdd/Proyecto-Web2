@@ -28,7 +28,7 @@
                           <td>{{$propuesta->estado}}</td>
                           <td><a href="" class="btn btn-primary ">Revisar Comentario</a></td>
 
-                        </tr>
+                        </tr> 
                       @endforeach
                     </tbody>
                 </table>
