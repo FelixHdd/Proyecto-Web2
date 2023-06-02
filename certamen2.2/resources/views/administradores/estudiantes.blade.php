@@ -40,8 +40,7 @@
         <h2>Agregar Estudiante</h2>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{route('estudiantes.store')}}">
-        @merhod('put')  
+        <form method="POST" action="{{route('estudiantes.store')}}"
         @csrf
           <div class="row">
             <div class="col-4">
