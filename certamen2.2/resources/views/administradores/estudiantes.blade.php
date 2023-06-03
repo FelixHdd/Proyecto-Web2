@@ -40,8 +40,8 @@
         <h2>Agregar Estudiante</h2>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{route('estudiantes.store')}}">
-          @csrf
+        <form method="POST" action="{{route('estudiantes.store')}}"
+        @csrf
           <div class="row">
             <div class="col-4">
               <div class="mb-3">
@@ -71,7 +71,7 @@
               </div>
             </div>
             <button class="btn btn-primary" type="submit">
-              Agregar Profesor
+              Agregar Estudiante
             </button>
             <button class="btn btn-primary" type="reset">
               Cancelar

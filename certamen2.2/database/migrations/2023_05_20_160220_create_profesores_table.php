@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('rut',10)->primary();
             $table->string('nombre',20);
             $table->string('apellido',20);
+            
             //faltan las relaciones de PK Y FK correspondientes.
         });
     }

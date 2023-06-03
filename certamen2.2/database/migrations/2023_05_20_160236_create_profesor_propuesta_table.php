@@ -19,6 +19,7 @@ return new class extends Migration
             $table->time('hora');
             $table->text('comentario');
             //faltan las relaciones de PK Y FK correspondientes.
+            
         });
     }
 

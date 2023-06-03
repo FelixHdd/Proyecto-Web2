@@ -5,7 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EstudiantesController;
 use App\Http\Controllers\AdministradoresController;
 use App\Http\Controllers\ProfesoresController;
-
+use App\Http\Controllers\PropuestasController;
+use App\Models\Propuesta;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ Route::get('/',[HomeController::class,'index'])->name('home.index');
 //rutas estudiantes
 Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
 Route::get('/estudiantes/propuesta',[EstudiantesController::class,'create'])->name('estudiantes.create');
+Route::get('/estudiantes/estado',[EstudiantesController::class,'show'])->name('estudiantes.show');
+
 
 
 
@@ -44,3 +47,5 @@ Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesore
 Route::get('/profesores/borrar',[ProfesoresController::class,'delete'])->name('profesores.delete');
 Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('profesores.add');
 
+//Rutas Propuestas
+Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');

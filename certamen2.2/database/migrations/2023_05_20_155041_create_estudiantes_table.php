@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('apellido',20);
             $table->string('email',50);
             
+            $table->foreign('rut')->references('estudiante_rut')->on('propuestas');
         });
     }
 

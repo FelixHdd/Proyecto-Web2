@@ -15,8 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             EstudiantesSeeder::class,
             ProfesoresSeeder::class,
-            // PartidosSeeder::class,
-            // EquiposPartidosSeeder::class,
         ]);
     }
 }

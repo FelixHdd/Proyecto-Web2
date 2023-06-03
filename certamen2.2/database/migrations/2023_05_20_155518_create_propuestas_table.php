@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('documento',100);
             $table->tinyInteger('estado');
             $table->string('estudiante_rut',10);
-            //faltan las relaciones de PK Y FK correspondientes.
             
         });
     }

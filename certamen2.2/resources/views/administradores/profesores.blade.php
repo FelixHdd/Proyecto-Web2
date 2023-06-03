@@ -65,7 +65,7 @@
                     Cancelar
                   </button>
                   <button class="btn btn-primary" type="submit">
-                    Agregar Estudiante
+                    Agregar Profesor
                   </button>
                 </div>
               </form>
