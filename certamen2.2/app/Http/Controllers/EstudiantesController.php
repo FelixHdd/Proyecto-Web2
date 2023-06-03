@@ -27,7 +27,7 @@ class EstudiantesController extends Controller
     }
     public function show(){
         $propuestas = Propuesta::orderBy('fecha')->get();
-        $estudiantes = Estudiante::orderBy('nombre')->get();
+        $estudiantes = Estudiante::All();
         return view('estudiantes.show',compact(['propuestas','estudiantes']));
     }
 }
