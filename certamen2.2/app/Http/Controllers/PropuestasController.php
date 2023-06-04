@@ -18,6 +18,11 @@ class PropuestasController extends Controller
         $estudiantes = Estudiante::all();
         return view('estudiantes.show',compact(['propuestas']));
     }
+    public function showp(){
+        $propuestas = Propuesta::with('estudiante')->get();
+        $estudiantes = Estudiante::all();
+        return view('profesores.showp',compact(['propuestas']));
+    }
 
     public function store(Request $request){
         $propuesta = new Propuesta();

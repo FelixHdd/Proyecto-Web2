@@ -9,23 +9,22 @@
                 <form action="">
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Seleccione Profesor</option>
-                        <option value="1">Dagoberto Cabrera</option>
-                        <option value="2">Carlos Alten</option>
+                        @foreach($profesores as $index=>$profesor)
+                        <option value="{{$profesor->rut}}">{{$profesor->nombre." ".$profesor->apellido}}</option>
+                        @endforeach
                     </select>
                     <div class="row mt-3">
                         <div class="col">
-                        <select class="form-select mb-3" aria-label="Default select example">
-                            <option selected>Seleccione Alumno</option>
-                            <option value="1">Pipeño</option>
-                            <option value="2">Sackert</option>
-                        </select>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre Alumno</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="">
+                            </div>
                         </div>
                         <div class="col">
-                        <select class="form-select mb-3" aria-label="Default select example">
-                            <option selected>Seleccione Propuesta</option>
-                            <option value="1">Version 1 </option>
-                            <option value="2">Version 5000</option>
-                        </select>
+                            <div class="mb-3">
+                                <label for="nombre-proyecto" class="form-label">Proyecto</label>
+                                <input type="text" class="form-control" id="nombre-proyecto" placeholder="">
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>

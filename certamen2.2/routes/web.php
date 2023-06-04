@@ -50,3 +50,6 @@ Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('pro
 //Rutas Propuestas
 Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');
 
+//ruta profesor/propuesta
+Route::get('/profesores/propuesta',[PropuestasController::class,'showp'])->name('profesores.showp');
+
