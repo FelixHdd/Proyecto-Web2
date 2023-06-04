@@ -29,7 +29,7 @@ Route::get('/',[HomeController::class,'index'])->name('home.index');
 //rutas estudiantes
 Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
 Route::get('/estudiantes/propuesta',[EstudiantesController::class,'create'])->name('estudiantes.create');
-Route::get('/estudiantes/estado',[EstudiantesController::class,'show'])->name('estudiantes.show');
+Route::get('/estudiantes/estado',[PropuestasController::class,'show'])->name('estudiantes.show');
 
 
 
@@ -49,3 +49,4 @@ Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('pro
 
 //Rutas Propuestas
 Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');
+

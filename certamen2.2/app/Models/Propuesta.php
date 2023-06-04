@@ -13,8 +13,8 @@ class Propuesta extends Model
     protected $primarykey = 'id';
     public $timestamps = false;
 
-    public function estudiantes():HasMany{
-        return $this->hasMany(Estudiante::class,'estudiante_rut');
+    public function estudiante(){
+    return $this->belongsTo(Estudiante::class, 'estudiante_rut', 'rut');
     }
     
 }

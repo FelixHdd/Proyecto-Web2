@@ -19,6 +19,7 @@ return new class extends Migration
             $table->tinyInteger('estado');
             $table->string('estudiante_rut',10);
             
+            $table->foreign('estudiante_rut')->references('rut')->on('estudiantes');
         });
     }
 

@@ -11,9 +11,8 @@
                     <select name="rut" class="form-select mb-3" aria-label="Default select example">
                         <option selected>Seleccione su Nombre</option>
                         @foreach($estudiantes as $index => $estudiante)
-                        <option value="{{$estudiante->rut}}">{{$estudiante->nombre}}</option>
+                        <option value="{{$estudiante->rut}}">{{$estudiante->nombre}} {{$estudiante->apellido}}</option>
                         @endforeach
-                       <!-- Seleccionar nombre de alumno -->
                     </select>
 
                     <div class="mb-3">
@@ -24,7 +23,7 @@
                         <button class="btn btn-primary" type="submit">
                             Subir Propuesta
                         </button>
-                        <button class="btn btn-secondary" type="reset" value="{{route('estudiantes.index')}}">Cancelar</button>
+                        <button class="btn btn-secondary" type="reset">Cancelar</button>
                     </div>
                 </form>
             </div>

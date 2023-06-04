@@ -26,8 +26,8 @@ $estados = [0 => 'Esperando Revision',1=>'Modificar Propuesta',2=>'Rechazado',3=
                         <tr>
                           <th scope="row">{{$index + 1}}</th>
                           <td>{{$propuesta->estudiante_rut}}</td>
-                          <!-- <td>{{$propuesta->estudiante_rut->nombre}}</td>
-                          <td>{{$propuesta->estudiante_rut->apellido}}</td> -->
+                          <td>{{$propuesta->estudiante->nombre}}</td>
+                          <td>{{$propuesta->estudiante->apellido}}</td>
                           <td>{{$estados[$propuesta->estado]}}</td>
                           <td><a href="" class="btn btn-primary ">Revisar Comentario</a></td>
 

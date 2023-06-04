@@ -25,9 +25,9 @@ class EstudiantesController extends Controller
         $estudiante->save();
         return redirect()->route('estudiantes.index');
     }
-    public function show(){
-        $propuestas = Propuesta::orderBy('fecha')->get();
-        $estudiantes = Estudiante::All();
-        return view('estudiantes.show',compact(['propuestas','estudiantes']));
-    }
+    // public function show(){
+    //     $propuestas = Propuesta::with('estudiante')->get();
+    //     $estudiantes = Estudiante::all();
+    //     return view('estudiantes.show',compact(['propuestas','estudiantes']));
+    // }
 }

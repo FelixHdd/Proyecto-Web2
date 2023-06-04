@@ -12,6 +12,13 @@ use App\Models\Estudiante;
 
 class PropuestasController extends Controller
 {
+
+    public function show(){
+        $propuestas = Propuesta::with('estudiante')->get();
+        $estudiantes = Estudiante::all();
+        return view('estudiantes.show',compact(['propuestas']));
+    }
+
     public function store(Request $request){
         $propuesta = new Propuesta();
         $propuesta->fecha = now();
