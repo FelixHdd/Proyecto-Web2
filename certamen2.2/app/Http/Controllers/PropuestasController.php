@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Propuesta;
 use App\Models\Estudiante;
+use App\Models\Profesor;
+
 
 
 
@@ -17,6 +19,11 @@ class PropuestasController extends Controller
         $propuestas = Propuesta::with('estudiante')->get();
         $estudiantes = Estudiante::all();
         return view('estudiantes.show',compact(['propuestas']));
+    }
+    public function showp(){
+        $propuestas = Propuesta::with('estudiante')->get();
+        $estudiantes = Estudiante::all();
+        return view('profesores.showp',compact(['propuestas']));
     }
 
     public function store(Request $request){
@@ -32,4 +39,5 @@ class PropuestasController extends Controller
        
         return redirect()->route('estudiantes.index');
     }
+    
 }

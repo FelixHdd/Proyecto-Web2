@@ -47,7 +47,7 @@ Route::put('/administradores/propuesta',[AdministradoresController::class,'updat
 //rutas profesores
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
 Route::get('/profesores/borrar',[ProfesoresController::class,'delete'])->name('profesores.delete');
-Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('profesores.add');
+Route::get('/profesores/{propuesta}',[PropuestasController::class,'add'])->name('profesores.add');
 
 //Rutas Propuestas
 Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');

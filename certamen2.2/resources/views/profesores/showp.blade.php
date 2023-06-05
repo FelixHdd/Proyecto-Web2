@@ -31,7 +31,7 @@ $estados = [0 => 'Esperando Revision',1=>'Modificar Propuesta',2=>'Rechazado',3=
                           <td>{{$propuesta->estudiante->apellido}}</td>
                           <td>{{$estados[$propuesta->estado]}}</td>
                           <td>{{$propuesta->documento}}</td>
-                          <td><a href="{{route('profesores.add')}}" class="btn btn-primary ">Agregar Comentario</a></td>
+                          <td><a href="{{route('profesores.add, $propuesta->id')}}" class="btn btn-primary ">Agregar Comentario</a></td>
 
                         </tr> 
                       @endforeach

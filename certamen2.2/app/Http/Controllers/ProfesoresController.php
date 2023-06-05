@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Profesor;
+use App\Models\Propuesta;
+
 
 class ProfesoresController extends Controller
 {
@@ -14,9 +16,10 @@ class ProfesoresController extends Controller
     public function delete(){
         return view('profesores.EliminarC');
     }
-    public function add(){
+    public function add(Propuesta $propuesta){
+        $propuesta = Propuesta::with('estudiante')->get();
         $profesores = Profesor::orderBy('rut')->orderBy('nombre')->get();
-        return view('profesores.ingresoC',compact('profesores'));
+        return view('profesores.ingresoC',compact(['propuesta','profesores']));
     }
     public function show(){
         return view('profesores.show');
