@@ -29,7 +29,7 @@
                       </p>
                       <div class="row d-flex align-items-center">
                           <div class="col" >
-                              <a href="{{route('profesores.add')}}" class=" btn btn-secondary">
+                              <a href="" class=" btn btn-secondary">
                                   Ingresar Comentarios 
                               </a>
                           </div>

@@ -17,13 +17,14 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre Alumno</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="">
+                                <input class="form-control" type="text" value="#aqui hay problemas" aria-label="readonly input example" readonly>
+
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
                                 <label for="nombre-proyecto" class="form-label">Proyecto</label>
-                                <input type="text" class="form-control" id="nombre-proyecto" placeholder="">
+                                <input class="form-control" type="text" value="{{$propuesta->documento}}" aria-label="readonly input example" readonly>
                             </div>
                         </div>
                         <div class="mb-3">

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Propuesta;
 use App\Models\Estudiante;
+use App\Models\Profesor;
+
 
 
 
@@ -37,4 +39,5 @@ class PropuestasController extends Controller
        
         return redirect()->route('estudiantes.index');
     }
+    
 }
