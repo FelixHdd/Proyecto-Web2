@@ -40,6 +40,8 @@ Route::get('/administradores/profesores',[AdministradoresController::class,'prof
 Route::get('/administradores/estudiantes',[AdministradoresController::class,'estudiantesadmin'])->name('administradores.estudiantes');
 Route::post('/administradores/profesores',[AdministradoresController::class,'profesoresstore'])->name('profesores.store');
 Route::post('/administradores/estudiantes',[AdministradoresController::class,'estudiantesstore'])->name('estudiantes.store');
+Route::get('/administradores/propuesta',[AdministradoresController::class,'propuestasadmin'])->name('administradores.propuesta');
+Route::put('/administradores/propuesta',[AdministradoresController::class,'update'])->name('administradores.update');
 
 
 //rutas profesores
@@ -49,4 +51,7 @@ Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('pro
 
 //Rutas Propuestas
 Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');
+
+//ruta profesor/propuesta
+Route::get('/profesores/propuesta',[PropuestasController::class,'showp'])->name('profesores.showp');
 

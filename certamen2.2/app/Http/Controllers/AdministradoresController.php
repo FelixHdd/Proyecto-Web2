@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Estudiante;
 use App\Models\Profesor;
+use App\Models\Propuesta;
 
 class AdministradoresController extends Controller
 {
@@ -41,6 +42,15 @@ class AdministradoresController extends Controller
     }
     
     public function propuestasadmin(){
-        return view('administradores.propuestas');
+        $propuestas = Propuesta::with('estudiante')->get();
+        $estudiantes = Estudiante::all();
+        return view('administradores.propuesta',compact(['propuestas','estudiantes']));
+    }
+    public function update(Request $request,Propuesta $propuesta){
+        $propuestas = Propuesta::with('estudiante')->get();
+        $estudiantes = Estudiante::all();
+        $propuesta->estado = $request->estado;
+        $propuesta->save();
+        return redirect()->route('administradores.propuesta');
     }
 }

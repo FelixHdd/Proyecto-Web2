@@ -28,8 +28,8 @@
                       Estudiante
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Propuesta</a></li>
-                      <li><a class="dropdown-item" href="#">Estado</a></li>
+                      <li><a class="dropdown-item" href="{{route('estudiantes.create')}}">Propuesta</a></li>
+                      <li><a class="dropdown-item" href="{{route('estudiantes.show')}}">Estado</a></li>
                       <li><a class="dropdown-item" href="#">Retroalimentacion</a></li>
                     </ul>
                   </li>
@@ -50,7 +50,7 @@
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="{{route('administradores.profesores')}}">Profesores</a></li>
                       <li><a class="dropdown-item" href="{{route('administradores.estudiantes')}}">Estudiantes</a></li>
-                      <li><a class="dropdown-item" href="#">Estado Propuesta</a></li>
+                      <li><a class="dropdown-item" href="{{route('administradores.propuesta')}}">Estado Propuesta</a></li>
                     </ul>
                   </li>
                 </ul>

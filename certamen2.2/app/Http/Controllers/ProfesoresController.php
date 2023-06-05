@@ -15,6 +15,10 @@ class ProfesoresController extends Controller
         return view('profesores.EliminarC');
     }
     public function add(){
-        return view('profesores.IngresoC');
+        $profesores = Profesor::orderBy('rut')->orderBy('nombre')->get();
+        return view('profesores.ingresoC',compact('profesores'));
+    }
+    public function show(){
+        return view('profesores.show');
     }
 }

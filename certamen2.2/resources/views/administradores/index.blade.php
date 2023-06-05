@@ -34,7 +34,7 @@
                       </p>
                       <div class="row d-flex align-items-center">
                           <div class="col" >
-                              <a href="" class=" btn btn-secondary">
+                              <a href="{{route('administradores.propuesta')}}" class=" btn btn-secondary">
                                   Modificar Estado Propuesta
                               </a>
                           </div>
