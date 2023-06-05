@@ -17,7 +17,7 @@ class ProfesoresController extends Controller
         return view('profesores.EliminarC');
     }
     public function add(Propuesta $propuesta){
-        $propuesta = Propuesta::with('estudiante')->get();
+        
         $profesores = Profesor::orderBy('rut')->orderBy('nombre')->get();
         return view('profesores.ingresoC',compact(['propuesta','profesores']));
     }
