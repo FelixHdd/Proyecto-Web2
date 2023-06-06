@@ -41,13 +41,14 @@ Route::get('/administradores/estudiantes',[AdministradoresController::class,'est
 Route::post('/administradores/profesores',[AdministradoresController::class,'profesoresstore'])->name('profesores.store');
 Route::post('/administradores/estudiantes',[AdministradoresController::class,'estudiantesstore'])->name('estudiantes.store');
 Route::get('/administradores/propuesta',[AdministradoresController::class,'propuestasadmin'])->name('administradores.propuesta');
-Route::put('/administradores/propuesta',[AdministradoresController::class,'update'])->name('administradores.update');
+Route::put('/administradores/editar/{propuesta}',[AdministradoresController::class,'update'])->name('administradores.update');
+Route::get('/administradores/editar/{propuesta}',[AdministradoresController::class,'edit'])->name('administradores.edit');
 
 
 //rutas profesores
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
 Route::get('/profesores/borrar',[ProfesoresController::class,'delete'])->name('profesores.delete');
-Route::get('/profesores/{propuesta}',[PropuestasController::class,'add'])->name('profesores.add');
+Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('profesores.add');
 
 //Rutas Propuestas
 Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');

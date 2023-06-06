@@ -46,10 +46,13 @@ class AdministradoresController extends Controller
         $estudiantes = Estudiante::all();
         return view('administradores.propuesta',compact(['propuestas','estudiantes']));
     }
-    public function update(Request $request,Propuesta $propuesta){
-        $propuestas = Propuesta::with('estudiante')->get();
-        $estudiantes = Estudiante::all();
+    public function edit(Propuesta $propuesta){
+        return view('administradores.edit',compact('propuesta'));
+    }
+    public function update( Request $request,Propuesta $propuesta){
         $propuesta->estado = $request->estado;
+        $propuesta->documento = $propuesta->documento;
+
         $propuesta->save();
         return redirect()->route('administradores.propuesta');
     }
