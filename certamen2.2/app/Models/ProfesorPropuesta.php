@@ -12,6 +12,7 @@ class ProfesorPropuesta extends Model
 {
     use HasFactory;
     protected $table = "profesor_propuesta";
+    public $timestamps = false;
 
     public function profesores():HasMany{
         return $this->hasMany(Profesor::class);

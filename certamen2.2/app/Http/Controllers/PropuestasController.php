@@ -12,6 +12,7 @@ use App\Models\Profesor;
 
 
 
+
 class PropuestasController extends Controller
 {
 
@@ -39,5 +40,5 @@ class PropuestasController extends Controller
        
         return redirect()->route('estudiantes.index');
     }
-    
+
 }

@@ -14,12 +14,16 @@ return new class extends Migration
         Schema::create('profesor_propuesta', function (Blueprint $table) {
             //campos
             $table->integer('propuesta_id');
-            $table->string('profesor_rut',10);
+            $table->integer('profesor_id');
+            $table->primary(['propuesta_id','profesor_id']);
+            //
             $table->date('fecha');
             $table->time('hora');
             $table->text('comentario');
-            //faltan las relaciones de PK Y FK correspondientes.
-            
+            //
+            $table->foreign('propuesta_id')->references('id')->on('propuestas');
+            $table->foreign('profesor_id')->references('id')->on('profesores');
+
         });
     }
 

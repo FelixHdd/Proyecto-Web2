@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Profesor;
 use App\Models\Propuesta;
 use App\Models\Estudiante;
+use App\Models\ProfesorPropuesta;
 use Illuminate\Support\Facades\DB;
 
 
@@ -26,11 +27,22 @@ class ProfesoresController extends Controller
         $profesores = Profesor::orderBy('id')->orderBy('nombre')->get();
         $rut = $propuesta->estudiante_rut;
         $estudiante = DB::table('estudiantes')->where('rut', $rut)->first();
-        
         // dd($estudiante);
         return view('profesores.ingresoC',compact(['estudiante','propuesta','profesores']));
     }
-    public function show(){
-        return view('profesores.show');
+    public function store(Request $request){
+        $propuestaProfesor = new ProfesorPropuesta();
+
+        $propuestaProfesor->profesor_id = $request->id;
+        $propuestaProfesor->propuesta_id = $request->propuesta_id;
+        $propuestaProfesor->fecha = date('Y-m-d');
+        $propuestaProfesor->hora = date("H:i:s");
+        $propuestaProfesor->comentario = $request->comentario;
+
+        
+        $propuestaProfesor->save();
+       
+        return redirect()->route('estudiantes.index');
     }
+    
 }

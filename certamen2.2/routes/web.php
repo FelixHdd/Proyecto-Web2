@@ -48,11 +48,12 @@ Route::get('/administradores/editar/{propuesta}',[AdministradoresController::cla
 //rutas profesores
 Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesores.index');
 Route::get('/profesores/borrar',[ProfesoresController::class,'delete'])->name('profesores.delete');
-Route::get('/profesores/agregar',[ProfesoresController::class,'add'])->name('profesores.add');
+Route::get('/profesores/propuesta',[PropuestasController::class,'showp'])->name('profesores.showp');
+Route::get('/profesores/propuesta/{propuesta}',[ProfesoresController::class,'add'])->name('profesores.add');
+Route::Post('/profesores/propuesta',[ProfesoresController::class,'store'])->name('profesores.store');
 
 //Rutas Propuestas
 Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');
 
 //ruta profesor/propuesta
-Route::get('/profesores/propuesta',[PropuestasController::class,'showp'])->name('profesores.showp');
 
