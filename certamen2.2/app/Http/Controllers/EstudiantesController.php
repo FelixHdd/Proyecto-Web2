@@ -25,4 +25,8 @@ class EstudiantesController extends Controller
         $estudiante->save();
         return redirect()->route('estudiantes.index');
     }
-}
+    public function list(Propuesta $propuesta){
+        $propuesta_c = $propuesta->PropuestaConComentario->first();
+        return view('estudiantes.list', compact('propuesta_c'));
+    }
+};

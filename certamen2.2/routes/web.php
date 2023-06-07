@@ -30,9 +30,7 @@ Route::get('/',[HomeController::class,'index'])->name('home.index');
 Route::get('/estudiantes',[EstudiantesController::class,'index'])->name('estudiantes.index');
 Route::get('/estudiantes/propuesta',[EstudiantesController::class,'create'])->name('estudiantes.create');
 Route::get('/estudiantes/estado',[PropuestasController::class,'show'])->name('estudiantes.show');
-
-
-
+Route::get('/estudiantes/estado/{propuesta}',[EstudiantesController::class,'list'])->name('estudiantes.list');
 
 //rutas administradores (Esto esta listo/ No duplicar Rutas)
 Route::get('/administradores',[AdministradoresController::class,'index'])->name('administradores.index');
@@ -50,7 +48,7 @@ Route::get('/profesores',[ProfesoresController::class,'index'])->name('profesore
 Route::get('/profesores/borrar',[ProfesoresController::class,'delete'])->name('profesores.delete');
 Route::get('/profesores/propuesta',[PropuestasController::class,'showp'])->name('profesores.showp');
 Route::get('/profesores/propuesta/{propuesta}',[ProfesoresController::class,'add'])->name('profesores.add');
-// Route::Post('/profesores/propuesta',[ProfesoresController::class,'store'])->name('profesores.store');
+Route::Post('/profesores/propuesta',[ProfesoresController::class,'store'])->name('profesores.store');
 
 //Rutas Propuestas
 Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');
