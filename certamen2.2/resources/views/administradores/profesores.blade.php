@@ -12,18 +12,20 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Rut</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellido</th>
+                    <th scope="col">Correo Electronico</th>
+
                   </tr>
                 </thead>
                 <tbody>
                   @foreach($profesores as $index => $profesor)
                     <tr>
                       <td class="align-middle">{{$index+1}}</td>
-                      <td class="align-middle">{{$profesor->rut}}</td>
                       <td class="align-middle">{{$profesor->nombre}}</td>
                       <td class="align-middle">{{$profesor->apellido}}</td>
+                      <td class="align-middle">{{$profesor->email}}</td>
+
                     </tr>
                   @endforeach
                 </tbody>
@@ -40,8 +42,8 @@
               <form method="POST" action="{{route('profesores.store')}}">
                 @csrf
                 <div class="mb-3">
-                  <label for="rut" class="form-label">Rut</label>
-                  <input type="text" class="form-control" id="rut" name="rut" placeholder="xxxxxxxx-x">
+                  <label for="correo" class="form-label">Correo Electronico</label>
+                  <input type="mail" class="form-control" id="correo" name="email" placeholder="ejemplo@usm.cl">
                 </div>
 
                 <div class="row">
@@ -60,13 +62,17 @@
                   </div>
                 </div>
 
-                </div>
-                  <button class="btn btn-primary" type="reset">
-                    Cancelar
-                  </button>
-                  <button class="btn btn-primary" type="submit">
-                    Agregar Profesor
-                  </button>
+                <div class="row">
+                  <div class="col">
+                    <button class="btn btn-primary" type="submit">
+                      Agregar Profesor
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-primary" type="reset">
+                      Cancelar
+                     </button>
+                  </div>
                 </div>
               </form>
             </div>

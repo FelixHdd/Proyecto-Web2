@@ -17,7 +17,7 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre Alumno</label>
-                                <input class="form-control" type="text" value="aqui hay problema" aria-label="readonly input example" readonly>
+                                <input class="form-control" type="text" value="{{$estudiante->nombre}} {{$estudiante->apellido}}" aria-label="readonly input example" readonly>
 
                             </div>
                         </div>

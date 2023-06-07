@@ -11,7 +11,7 @@ class ProfesoresSeeder extends Seeder
     public function run(): void
     {
         DB::table('profesores')->insert([
-            ['rut'=> '98765432-1','nombre'=>'Carlos','apellido'=>'Alten'],
+            ['id'=> '1','nombre'=>'Carlos','apellido'=>'Alten','email'=>'carlos.alten@usm.cl'],
         ]);
     }
 }

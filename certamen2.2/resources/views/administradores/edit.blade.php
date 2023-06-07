@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="mt-3 d-grid gap-2 d-lg-block">
                                     <button class="btn btn-primary" type="submit">Editar Propuesta</button>
-                                    <a class="btn btn-danger"href="{{route('administradores.propuesta')}}">Salir</a>
+                                    <a class="btn btn-danger text-white"href="{{route('administradores.propuesta')}}">Salir</a>
                                 </div>
                             </form>
                         </div>
