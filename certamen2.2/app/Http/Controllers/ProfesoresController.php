@@ -30,19 +30,19 @@ class ProfesoresController extends Controller
         // dd($estudiante);
         return view('profesores.ingresoC',compact(['estudiante','propuesta','profesores']));
     }
-    public function store(Request $request){
-        $propuestaProfesor = new ProfesorPropuesta();
+    // public function store(Request $request){
+    //     $propuestaProfesor = new ProfesorPropuesta();
 
-        $propuestaProfesor->profesor_id = $request->id;
-        $propuestaProfesor->propuesta_id = $request->propuesta_id;
-        $propuestaProfesor->fecha = date('Y-m-d');
-        $propuestaProfesor->hora = date("H:i:s");
-        $propuestaProfesor->comentario = $request->comentario;
+    //     $propuestaProfesor->profesor_id = $request->id;
+    //     $propuestaProfesor->propuesta_id = $request->propuesta_id;
+    //     $propuestaProfesor->fecha = date('Y-m-d');
+    //     $propuestaProfesor->hora = date("H:i:s");
+    //     $propuestaProfesor->comentario = $request->comentario;
 
         
-        $propuestaProfesor->save();
+    //     $propuestaProfesor->save();
        
-        return redirect()->route('estudiantes.index');
-    }
+    //     return redirect()->route('estudiantes.index');
+    // }
     
 }

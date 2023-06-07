@@ -40,5 +40,9 @@ class PropuestasController extends Controller
        
         return redirect()->route('estudiantes.index');
     }
+    // public function destroy(Propuesta $propuesta){
+    //     $propuesta->comentario->delete();
+    //     return redirect()->route('falta ingresar la vista donde se esta borrando el comentario');
+    // }
 
 }

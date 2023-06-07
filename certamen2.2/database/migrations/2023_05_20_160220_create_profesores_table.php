@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('apellido',20);
             $table->string('email',20);
             
-            //faltan las relaciones de PK Y FK correspondientes.
         });
     }
 
