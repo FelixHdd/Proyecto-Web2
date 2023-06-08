@@ -11,17 +11,17 @@
                         <div class="row">
                             <div class="col">
                                 <label for="nombre" class="form-label">Profesor</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="" disabled>
+                                <input class="form-control" type="text"  value="{{$profesor->nombre}} {{$profesor->apellido}}" aria-label="readonly input example" readonly>
                             </div>
                             <div class="col">
 
                                 <label for="exampleFormControlInput1" class="form-label">.</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" disabled>
+                                <input class="form-control" type="text"  value="{{$propuesta_c->fecha}}" aria-label="readonly input example" readonly>
                             </div>
                         </div>  
                       <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Comenterio</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"disabled></textarea >
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"readonly>{{$propuesta_c->comentario}}</textarea >
                       </div>
                 </form>
             </div>

@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Propuesta;
 use App\Models\Estudiante;
 use App\Models\Profesor;
-
+use App\Models\ProfesorPropuesta;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -18,8 +19,10 @@ class PropuestasController extends Controller
 
     public function show(){
         $propuestas = Propuesta::with('estudiante')->get();
+        $proCom = DB::table('profesor_propuesta')->first();
+
         $estudiantes = Estudiante::all();
-        return view('estudiantes.show',compact(['propuestas']));
+        return view('estudiantes.show',compact(['propuestas','proCom']));
     }
     public function showp(){
         $propuestas = Propuesta::with('estudiante')->get();
@@ -40,9 +43,11 @@ class PropuestasController extends Controller
        
         return redirect()->route('estudiantes.index');
     }
-    // public function destroy(Propuesta $propuesta){
-    //     $propuesta->comentario->delete();
-    //     return redirect()->route('falta ingresar la vista donde se esta borrando el comentario');
-    // }
+    public function destroy(ProfesorPropuesta $proPro){
+        $proPro->delete();
+        return redirect()->route('profesores.showp');
+    }
+    
+ 
 
 }

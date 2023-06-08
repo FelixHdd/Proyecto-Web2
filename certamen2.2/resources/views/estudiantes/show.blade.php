@@ -29,9 +29,10 @@ $estados = [0 => 'Esperando Revision',1=>'Modificar Propuesta',2=>'Rechazado',3=
                           <td>{{$propuesta->estudiante->nombre}}</td>
                           <td>{{$propuesta->estudiante->apellido}}</td>
                           <td>{{$estados[$propuesta->estado]}}</td>
-                          <td><a href="" class="btn btn-primary ">Revisar Comentario</a></td>
+                          <td ><a href="{{route('estudiantes.list',$propuesta->id)}}" class="btn btn-primary" >Revisar Comentario</a></td>
                         </tr> 
                       @endforeach
+                      
                       <td><a href="{{route('estudiantes.create')}}" class="btn btn-secondary">Nueva Propuesta</a></td>
                     </tbody>
                 </table>
