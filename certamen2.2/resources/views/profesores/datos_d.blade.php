@@ -6,10 +6,8 @@
                 <h2>Eliminar Comentarios</h2>
             </div>
             <div class="card-body">
-                <form action="{{route('profesores.destroy',$propuestaCom->primary(['propuesta_id','profesor_id']))}}">
-                    @method('delete')
+                <form action="{{route('profesores.destroy', $propuesta->id,$profesor->id)}}">
                     @csrf
-
                     <div class="row">
                         <div class="col">
                             <label for="" class="form-label">Profesor</label>

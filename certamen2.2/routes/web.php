@@ -49,7 +49,7 @@ Route::get('/profesores/propuesta',[PropuestasController::class,'showp'])->name(
 Route::get('/profesores/propuesta/{propuesta}',[ProfesoresController::class,'add'])->name('profesores.add');
 Route::Post('/profesores/propuesta',[ProfesoresController::class,'store'])->name('profesores.store');
 Route::get('/profesores/borrar/{propuesta}',[ProfesoresController::class,'datos_d'])->name('profesores.datos_d');
-Route::delete('/profesores/borrar/{propuesta}',[PropuestasController::class,'destroy'])->name('profesores.destroy');
+Route::get('/profesores/borrar/{propuesta_id}/{profesor_id}',[PropuestasController::class,'destroy'])->name('profesores.destroy');
 
 
 //Rutas Propuestas

@@ -26,8 +26,9 @@ class PropuestasController extends Controller
     }
     public function showp(){
         $propuestas = Propuesta::with('estudiante')->get();
-        $estudiantes = Estudiante::all();
-        return view('profesores.showp',compact(['propuestas']));
+        $profesores = Profesor::orderBy('id')->get();
+
+        return view('profesores.showp',compact(['propuestas','profesores']));
     }
 
     public function store(Request $request){
@@ -43,8 +44,11 @@ class PropuestasController extends Controller
        
         return redirect()->route('estudiantes.index');
     }
-    public function destroy(ProfesorPropuesta $proPro){
-        $proPro->delete();
+    public function destroy($propuesta_id,$profesor_id){
+        $profesor = DB::table('profesores')->where('id',$profesor_id)->first();
+        $propuesta = DB::table('propuestas')->where('id',$propuesta_id)->first();
+
+        DB::table('profesor_propuesta')->where('propuesta_id',$propuesta->id)->where('profesor_id',$profesor->id)->delete();
         return redirect()->route('profesores.showp');
     }
     

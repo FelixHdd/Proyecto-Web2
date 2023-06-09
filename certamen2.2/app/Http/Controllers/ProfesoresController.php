@@ -41,13 +41,13 @@ class ProfesoresController extends Controller
 
         $propuestaProfesor->profesor_id = $request->id;
         $propuestaProfesor->propuesta_id = $request->propuesta_id;
-        $propuestaProfesor->fecha = date('d-m-Y');
+        $propuestaProfesor->fecha = date('Y-m-d');
         $propuestaProfesor->hora = date("H:i:s");
         $propuestaProfesor->comentario = $request->comentario;
 
        $propuestaProfesor->save();
        
-     return redirect()->route('estudiantes.index');
+     return redirect()->route('profesores.showp');
     }
     
     

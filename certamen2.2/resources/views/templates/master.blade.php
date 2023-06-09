@@ -28,9 +28,11 @@
                       Estudiante
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="{{route('estudiantes.create')}}">Propuesta</a></li>
-                      <li><a class="dropdown-item" href="{{route('estudiantes.show')}}">Estado</a></li>
-                      <li><a class="dropdown-item" href="#">Retroalimentacion</a></li>
+                      <li><a class="dropdown-item" href="{{route('estudiantes.create')}}">Ingresar Propuesta</a></li>
+                      <li><a class="dropdown-item" href="{{route('estudiantes.show')}}">Estado Propuesta</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="{{route('estudiantes.index')}}">Vista Estudiante</a></li>
+
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -38,9 +40,9 @@
                       Profesor
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Acceso Propuestas</a></li>
-                      <li><a class="dropdown-item" href="#">Ingresar Comentario</a></li>
-                      <li><a class="dropdown-item" href="#">Eliminar Comentario</a></li>
+                      <li><a class="dropdown-item" href="{{route('profesores.showp')}}">Acceso Propuestas</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="{{route('profesores.index')}}">Vista Profesor</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
@@ -51,6 +53,8 @@
                       <li><a class="dropdown-item" href="{{route('administradores.profesores')}}">Profesores</a></li>
                       <li><a class="dropdown-item" href="{{route('administradores.estudiantes')}}">Estudiantes</a></li>
                       <li><a class="dropdown-item" href="{{route('administradores.propuesta')}}">Estado Propuesta</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="{{route('administradores.index')}}">Vista Administrador</a></li>
                     </ul>
                   </li>
                 </ul>
