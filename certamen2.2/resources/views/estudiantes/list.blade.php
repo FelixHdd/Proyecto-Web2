@@ -15,12 +15,12 @@
                             </div>
                             <div class="col">
 
-                                <label for="exampleFormControlInput1" class="form-label">.</label>
+                                <label for="exampleFormControlInput1" class="form-label">Fecha</label>
                                 <input class="form-control" type="text"  value="{{$propuesta_c->fecha}}" aria-label="readonly input example" readonly>
                             </div>
                         </div>  
                       <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Comenterio</label>
+                        <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"readonly>{{$propuesta_c->comentario}}</textarea >
                       </div>
                 </form>
