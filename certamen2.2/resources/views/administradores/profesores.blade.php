@@ -39,7 +39,7 @@
               <h2>Agregar Profesor</h2>
             </div>
             <div class="card-body">
-              <form method="POST" action="{{route('profesores.store')}}">
+              <form method="POST" action="{{route('administradores.profesoresstore')}}">
                 @csrf
                 <div class="mb-3">
                   <label for="correo" class="form-label">Correo Electronico</label>

@@ -36,7 +36,7 @@ Route::get('/estudiantes/estado/{propuesta}',[EstudiantesController::class,'list
 Route::get('/administradores',[AdministradoresController::class,'index'])->name('administradores.index');
 Route::get('/administradores/profesores',[AdministradoresController::class,'profesoresadmin'])->name('administradores.profesores');
 Route::get('/administradores/estudiantes',[AdministradoresController::class,'estudiantesadmin'])->name('administradores.estudiantes');
-Route::post('/administradores/profesores',[AdministradoresController::class,'profesoresstore'])->name('profesores.store');
+Route::post('/administradores/profesores',[AdministradoresController::class,'profesoresstore'])->name('administradores.profesoresstore');
 Route::post('/administradores/estudiantes',[AdministradoresController::class,'estudiantesstore'])->name('estudiantes.store');
 Route::get('/administradores/propuesta',[AdministradoresController::class,'propuestasadmin'])->name('administradores.propuesta');
 Route::put('/administradores/editar/{propuesta}',[AdministradoresController::class,'update'])->name('administradores.update');
@@ -54,6 +54,6 @@ Route::get('/profesores/borrar/{propuesta_id}/{profesor_id}',[PropuestasControll
 
 //Rutas Propuestas
 Route::post('/estudiantes/propuesta',[PropuestasController::class,'store'])->name('propuestas.store');
-
+Route::get('/profesores/descargar/{propuesta}',[PropuestasController::class,'download'])->name('propuestas.download');
 //ruta profesor/propuesta
 

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('id')->autoIncrement();
             $table->string('nombre',20);
             $table->string('apellido',20);
-            $table->string('email',20);
+            $table->string('email',40);
             
         });
     }

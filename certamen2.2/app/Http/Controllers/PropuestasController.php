@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\DB;
 
 class PropuestasController extends Controller
 {
-
     public function show(){
         $propuestas = Propuesta::with('estudiante')->get();
         $proCom = DB::table('profesor_propuesta')->first();
@@ -43,6 +42,12 @@ class PropuestasController extends Controller
         $propuesta->save();
        
         return redirect()->route('estudiantes.index');
+    }
+    public function download($propuesta){
+        $propuesta = DB::table('propuestas')->where('id',$propuesta)->first();
+        $name = $propuesta->documento;
+        return Storage::download('public/'.$name);
+
     }
     public function destroy($propuesta_id,$profesor_id){
         $profesor = DB::table('profesores')->where('id',$profesor_id)->first();

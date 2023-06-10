@@ -24,9 +24,9 @@ class ProfesoresController extends Controller
         $prof_id = $propuesta->profesor_id;
 
         $profesor = $profesores->where('id', $prof_id)->first();
-        $pene = $propuesta->propuesta_id;
-        $propuestaCom = DB::table('profesor_propuesta')->where('propuesta_id',$pene)->where('profesor_id', $profesor->id)->first();
-        $propuesta = DB::table('propuestas')->where('id',$pene)->first();
+        $proId = $propuesta->propuesta_id;
+        $propuestaCom = DB::table('profesor_propuesta')->where('propuesta_id',$proId)->where('profesor_id', $profesor->id)->first();
+        $propuesta = DB::table('propuestas')->where('id',$proId)->first();
         return view('profesores.datos_d',compact(['profesor','propuesta','propuestaCom']));
     }
     public function add(Propuesta $propuesta){

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('profesor_id');
             $table->primary(['propuesta_id','profesor_id']);
             //
-            $table->date('fecha');
+            $table->date('fecha')->format('d-m-Y');
             $table->time('hora');
             $table->text('comentario');
             //

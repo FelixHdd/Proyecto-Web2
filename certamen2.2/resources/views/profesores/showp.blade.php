@@ -18,6 +18,7 @@ $estados = [0 => 'Esperando Revision',1=>'Modificar Propuesta',2=>'Rechazado',3=
                         <th scope="col">Apellido</th>
                         <th scope="col">Estado</th>
                         <th scope="col">Propuesta</th>
+                        <th scope="col">Descargar</th>
                         <th scope="col">Agregar Comentario</th>
                         <th scope="col">Eliminar Comentario</th>
                         
@@ -35,8 +36,10 @@ $estados = [0 => 'Esperando Revision',1=>'Modificar Propuesta',2=>'Rechazado',3=
                           <td>{{$propuesta->estudiante->apellido}}</td>
                           <td>{{$estados[$propuesta->estado]}}</td>
                           <td>{{$propuesta->documento}}</td>
-                          <td><a href="{{route('profesores.add', $propuesta->id)}}" class="btn btn-primary ">Agregar Comentario</a></div>                          </td>
+                          <td><a href="{{route('propuestas.download',$propuesta->id)}}"class="btn btn-secondary">Descargar</a></td>
+                          <td><a href="{{route('profesores.add', $propuesta->id)}}" class="btn btn-primary ">Agregar Comentario</a></div></td>
                           <td><a href="{{route('profesores.datos_d', $propuesta->id)}}"class="btn btn-danger text-white">Eliminar comentario</a></div></td>
+
                         </tr> 
                       @endforeach
                     </tbody>
