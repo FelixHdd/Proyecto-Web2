@@ -7,7 +7,7 @@
                  <h1 class="card-header bg-primary text-white">Subir Propuesta</h1>
                   <div class="card-body d-flex flex-column">
                       <p class="card-text flex-fill ">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum ipsam officiis quasi accusamus reprehenderit minus voluptate eum similique nesciunt omnis. Expedita doloremque sequi accusantium eligendi consequatur sit unde ipsum ex.
+                      Bienvenido,en esta seccion podrás subir tu propuesta de proyecto. Utiliza la plataforma para presentar tu trabajo de manera fácil y eficiente.
                       </p>
                       <div class="row d-flex align-items-center">
                           <div class="col text-start " >
@@ -24,7 +24,7 @@
                  <h1 class="card-header bg-primary text-white">Estado</h1>
                   <div class="card-body d-flex flex-column">
                       <p class="card-text flex-fill">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing Earum ipsam officiis quasi accusamus reprehenderit minus voluptate eum similique nesciunt omnis. Expedita doloremque sequi accusantium eligendi consequatur sit unde ipsum ex.
+                      Bienvenido a la sección de revisión de propuestas,puedes verificar el estado de tus propuestas de proyectos y leer los comentarios valiosos de tus profesores.Aprovecha los comentarios constructivos para mejorar tus propuestas.
                       </p>
                       <div class="row d-flex align-items-center">
                           <div class="col" >

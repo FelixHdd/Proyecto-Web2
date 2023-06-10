@@ -2,14 +2,14 @@
 <div class="container p-5">
         <h1 class="text-center text-white">Vista de Administrador</h1>
       <div class="row">
-          <div class="col d-flex">
+          <div class="col-12 col-md-6 d-flex">
               <div class="card">
                  <h1 class="card-header bg-primary text-white">Administrar Usuarios</h1>
                   <div class="card-body d-flex flex-column">
                       <p class="card-text flex-fill ">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum ipsam officiis quasi accusamus reprehenderit minus voluptate eum similique nesciunt omnis. Expedita doloremque sequi accusantium eligendi consequatur sit unde ipsum ex.
+                      Bienvenido, administrador. Esta sección te brinda el control total sobre el registro de alumnos y profesores. Agrega nuevos usuarios a nuestra base de datos de manera fácil y segura. Mantén actualizada la información, gestionando de forma eficiente la incorporación de alumnos y profesores.
                       </p>
-                      <div class="row d-flex align-items-center">
+                      <div class="row d-flex align-items-center mt-5">
                           <div class="col text-start " >
                               <a href="<?php echo e(route('administradores.estudiantes')); ?>" class="btn btn-secondary">
                               Administrar Estudiantes
@@ -24,12 +24,12 @@
                   </div>
               </div>
           </div>
-          <div class="col d-flex">
+          <div class="col-12 col-md-6 d-flex">
               <div class="card">
-                 <h1 class="card-header bg-primary text-white">Modificar Estado Proyectos</h1>
+                 <h1 class="card-header bg-primary text-white">Modificar Estado</h1>
                   <div class="card-body d-flex flex-column">
-                      <p class="card-text flex-fill">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing Earum ipsam officiis quasi accusamus reprehenderit minus voluptate eum similique nesciunt omnis. Expedita doloremque sequi accusantium eligendi consequatur sit unde ipsum ex.
+                      <p class="card-text flex-fill mb-5">
+                      Bienvenido, administrador. En esta sección, podrás modificar el estado de revisión de las propuestas ingresadas por los alumnos. Tendrás el control total para actualizar el estado de cada propuesta, ya sea en revisión, aprobada o rechazada.
                       </p>
                       <div class="row d-flex align-items-center">
                           <div class="col" >

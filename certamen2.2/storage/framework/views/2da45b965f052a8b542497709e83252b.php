@@ -7,11 +7,7 @@
               <h1 class="card-header bg-primary text-white" href="">Estudiante</h1>
                   <div class="card-body d-flex flex-column">
                       <p class="card-text flex-fill ">  
-                       Vista de Estudiantes
-                       Aqui podras hacer lo siguiente:
-                       Subir Propuestas
-                       Revisar los estados de tu propuesta
-                       Revisar comentarios hechos por profesores
+                      Bienvenido, alumno,En nuestra plataforma educativa,puedes subir tus propuestas de proyecto y recibir valiosos comentarios de tus profesores.
                       </p>
                       <div class="row d-flex align-items-center">
                           <div class="col " >
@@ -28,7 +24,7 @@
                  <h1 class="card-header bg-primary text-white">Profesor</h1>
                   <div class="card-body d-flex flex-column">
                       <p class="card-text flex-fill">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing Earum ipsam officiis quasi accusamus reprehenderit minus voluptate eum similique nesciunt omnis. Expedita doloremque sequi accusantium eligendi consequatur sit unde ipsum ex.
+                      Como profesor, tendrás acceso a todas las propuestas de informes enviadas por tus alumnos. Podrás revisarlas, realizar comentarios y brindar retroalimentación constructiva, todo en un solo lugar.
                       </p>
                       <div class="row d-flex align-items-center text-center">
                           <div class="col" >
@@ -45,7 +41,7 @@
                  <h1 class="card-header bg-primary text-white">Administrador</h1>
                   <div class="card-body d-flex flex-column">
                       <p class="card-text flex-fill">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum ipsam officiis quasi accusamus reprehenderit minus voluptate eum similique nesciunt omnis. Expedita doloremque sequi accusantium eligendi consequatur sit unde ipsum ex.
+                      Administra alumnos, profesores y estados de informes de manera sencilla,Simplificando tus tareas de gestión mediante nuestra página                                                                                               
                       </p>
                       <div class="row d-flex align-items-center text-center">
                           <div class="col" >
